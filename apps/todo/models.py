@@ -18,7 +18,7 @@ class ToDo(models.Model):
     is_completed = models.BooleanField(
         default=False,
         verbose_name="Завершено"
-    )
+    ) 
     created_at = models.DateTimeField(
         auto_now=True,
         verbose_name="Дата создания"
