@@ -3,6 +3,6 @@ from apps.todo.models import ToDo
 from apps.users.models import User
 
 class ToDoSerializer(serializers.ModelSerializer):
-    class Meta:
+    class Meta: 
         model = ToDo
         fields = "__all__"
