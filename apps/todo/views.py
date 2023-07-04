@@ -14,10 +14,10 @@ class ToDoAPIViewSet(GenericViewSet,
                      mixins.DestroyModelMixin):
     queryset = ToDo.objects.all()
     serializer_class = ToDoSerializer
-    # permission_classes = (IsAuthenticated, )
+    permission_classes = (IsAuthenticated, )
 
     def perform_create(self, serializer):
-        return serializer.save(user=self.request.user)
+        return serializer.save(user=self.request.user) 
 
     def get_permissioins(self):
         if self.action in ('update', 'partial_update', 'destroy'):
